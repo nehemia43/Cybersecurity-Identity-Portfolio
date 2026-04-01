@@ -15,17 +15,18 @@ To implement the Principle of Least Privilege (PoLP) by creating specialized adm
 ## 📸 Proof of Work
 
 ### 1. Administrative Group Membership
-Showing the scoped group assignment for the specialized accounts.
+Assigning the specialized identities to their respective functional groups (**DHCP Administrators** and **DNSAdmins**) to enforce scoped access.
+
 | DHCP Admin Group | DNS Admin Group |
 | :--- | :--- |
 | ![DHCP Group](./dhcp_group.png) | ![DNS Group](./dns_group.png) |
 
 ### 2. Functional Success (Scoped Access)
-Proving the accounts can perform their specific duties.
+Validating that each account can perform its designated administrative tasks within the infrastructure.
+
 | DNS Record Creation | DHCP Server Connection |
 | :--- | :--- |
 | ![DNS Success](./dns_success.png) | ![DHCP Success](./dhcp_success.png) |
 
-### 3. Governance Enforcement (Access Denied)
-The "Audit Evidence" showing that specialized admins cannot perform unauthorized tasks.
-![Access Denied View](./access_denied.png)
+### 3. Governance Verification (Access Denied)
+*Note: To complete the security audit, ensure you have verified that the DHCP Admin is blocked from DNS tools and vice versa.*
