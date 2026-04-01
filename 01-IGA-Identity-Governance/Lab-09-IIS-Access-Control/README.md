@@ -26,4 +26,4 @@ Evidence of the NTFS security policy used to block a specific user identity.
 ### 3. Access Verification
 | Blocked User (401.3 Error) | Admin User (Success) |
 | :--- | :--- |
-| ![Access Denied](./web_denied.png) | ![Access Success](./web_success.png) |
+| ![Access Denied](./access_denied.png) | ![Access Success](./access_success.png) |
