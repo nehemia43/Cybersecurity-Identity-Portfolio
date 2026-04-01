@@ -14,15 +14,17 @@ To implement an enterprise-grade Role-Based Access Control (RBAC) model using Ac
 ## ⚖️ GRC & Security Connection
 * **NIST 800-53 (AC-3):** Access Enforcement. Demonstrates the capability to restrict resource access based on departmental roles.
 * **Principle of Least Privilege (PoLP):** Ensures that users in the IT and HR departments cannot access Finance-specific data, reducing the risk of internal data leaks.
-
 ## 📸 Proof of Work
 
 ### 1. Directory Group Infrastructure
-Evidence of the departmental groups and their respective memberships.
-![AD Groups](./ad_groups.png)
+Establishing the departmental security groups and verifying individual user memberships.
+
+| Master Group View | Finance User | HR User | IT User |
+| :--- | :--- | :--- | :--- |
+| ![AD Overview](./ad_groups.png) | ![Finance](./finance_win.png) | ![HR](./hr_group.png) | ![IT](./it_group.png) |
 
 ### 2. Authorization Policy (ACL)
-Showing the specific NTFS permissions applied to the web root for each group.
+Evidence of the NTFS security policy applied to the web root to enforce Departmental Separation of Duties (SoD).
 ![IIS ACL Settings](./iis_acl.png)
 
 ### 3. Verification Logs
