@@ -14,14 +14,12 @@ To reduce the attack surface of a Windows endpoint by obfuscating the default pr
 
 ## 📸 Proof of Work
 
-### 1. Group Policy Configuration
-Proving the technical enforcement of the account rename.
-![GPO Rename](./rename_policy.png)
+### 1. Security Policy Configuration
+| Account Rename GPO | Privilege Audit GPO |
+| :--- | :--- |
+| ![Rename Policy](./rename_policy.png) | ![Audit Policy](./audit_policy.png) |
 
-### 2. Account Verification
-Validating that the local SAM database reflects the obfuscated name.
-![Renamed Account](./account_verify.png)
-
-### 3. Audit Log Validation
-Showing the Windows Event Viewer successfully capturing privileged activity logs.
-![Security Logs](./audit_logs.png)
+### 2. Identity Verification & Audit Trail
+| Renamed Local Account | Event Viewer Security Logs |
+| :--- | :--- |
+| ![Account Verify](./account_verify.png) | ![Audit Logs](./audit_logs.png) |
