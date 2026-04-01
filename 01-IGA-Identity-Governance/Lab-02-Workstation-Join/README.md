@@ -13,15 +13,11 @@ Establish a secure trust relationship between a Windows 10 endpoint and the `cyb
 
 ## 📸 Proof of Work
 
-### 1. Domain Join Success
-Click the image to view the full resolution.
+| Domain Welcome | System Properties |
+| :--- | :--- |
+| ![Welcome](./welcome.png) | ![System](./system.png) |
 
-[![Domain Welcome Message](./welcome_message.png)](./welcome_message.png)
-
-### 2. System Verification
-[![System Properties](./system_properties.png)](./system_properties.png)
-
-### 3. Network Diagnostics (DNS & Connectivity)
-| IP Config | NSLookup | Ping Test |
+### Network Diagnostics
+| IPConfig | NSLookup | Ping |
 | :--- | :--- | :--- |
-| [![IPConfig](./ipconfig.png)](./ipconfig.png) | [![NSLookup](./nslookup.png)](./nslookup.png) | [![Ping](./ping.png)](./ping.png) |
+| ![IP](./ipconfig.png) | ![DNS](./nslookup.png) | ![Ping](./ping.png) |
