@@ -13,5 +13,15 @@ To implement granular Identity Attribute management and establish time-bound acc
 * **Audit Trail:** Rich attribute data ensures that security logs provide clear context (Who, What, Where) during an incident response investigation.
 
 ## 📸 Proof of Work
-![User Attributes Dashboard](./images/User_Attributes.png)
-![Logon Hours Config](./images/Logon_Hours.png)
+
+### 1. Identity Provisioning & Enrichment
+Validating the creation of the user account and the population of professional attributes (Job Title, Office, Department) to support future RBAC.
+
+| New User Creation | Identity Enrichment |
+| :--- | :--- |
+| ![New User](./new_user.png) | ![Enrichment](./identity_enrichment.png) |
+
+### 2. Access Governance (Logon Hours)
+Implementing time-based restrictions to enforce business-hours-only access, reducing the lateral movement risk during off-hours.
+
+![Time-Based Access](./time_access.png)
