@@ -15,15 +15,13 @@ To implement granular data-at-rest security by enforcing NTFS Access Control Lis
 
 ## 📸 Proof of Work
 
-### 1. Directory Structure & Test Files
-Showing the physical layout of the IAM data environment.
-![Folder Structure](./folder_layout.png)
-
-### 2. NTFS Security Configuration (ACLs)
-The "Audit Receipt" showing the Allow/Deny rules for the Finance department.
-![Finance ACLs](./finance_security.png)
-
 ### 3. Verification (Cross-Departmental Testing)
-| Authorized Access (Finance) | Unauthorized Access (Blocked) |
+Validating the "Deny-Override" logic. The system successfully authorizes the departmental owner while hard-blocking unauthorized identities.
+
+| Authorized Access (Finance User) | Unauthorized Access (Blocked) |
 | :--- | :--- |
 | ![Finance Success](./finance_access.png) | ![Access Denied](./blocked_access.png) |
+
+---
+## 🏁 Pillar 01: Foundation Complete
+This concludes the foundational Identity Governance section. All core infrastructure (AD, GPO, IIS, and NTFS) is now secured and audited.
