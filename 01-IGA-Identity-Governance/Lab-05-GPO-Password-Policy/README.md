@@ -16,5 +16,35 @@ To implement automated security governance by enforcing password complexity and 
 * **Governance Automation:** Moves the organization from "Manual Compliance" (asking users to be secure) to "Technical Enforcement" (forcing the system to be secure).
 
 ## 📸 Proof of Work
-![GPO Configuration Dashboard](./ou_policy_config.png)
-![Password Rejection Message](./password_failure.png)
+
+### 1. Target Discovery & Migration
+First, I identified the workstation hostname and moved the object into the managed `Computers` Organizational Unit to ensure policy inheritance.
+
+| Hostname Identification | OU Migration Selection |
+| :--- | :--- |
+| ![Hostname](./hostname_check.png) | ![Moving to OU](./move_to_ou.png) |
+
+> **Audit Evidence:** Workstation successfully migrated to `IAM Class > Computers`.
+> ![Migration Success](./computer_migration.png)
+
+### 2. Policy Creation & Management
+Linking the security policy to the container and ensuring it is enforced across the domain.
+
+| GPO Creation | GPO Management View |
+| :--- | :--- |
+| ![Creation](./gpo_creation.png) | ![Management](./gpo_management.png) |
+
+### 3. Technical Controls (Account Policies)
+Configuring the specific security baseline: 6-character minimum and tracking password history.
+
+| Length & Complexity | Password History |
+| :--- | :--- |
+| ![Settings](./policy_settings.png) | ![History](./password_history.png) |
+
+### 4. Verification (The "Failure" Test)
+Proving the policy is active. The system rejects a 4-character password, forcing compliance with the 6-character requirement.
+![Password Rejection](./password_rejection.png)
+
+### 4. Verification (The "Failure" Test)
+Proving the policy is active. The system rejects a 4-character password, forcing compliance with the 6-character requirement.
+![Password Rejection](./password_rejection.png)
