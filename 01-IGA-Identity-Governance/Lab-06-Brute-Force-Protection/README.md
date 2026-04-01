@@ -14,13 +14,27 @@ To mitigate credential-based attacks (Brute Force/Dictionary) by enforcing advan
 
 ## 📸 Proof of Work
 
-### 1. Security Policy Configuration
-![Policy Settings](./policy_hardened.png)
+### 1. Hardened Password Policy
+Implementing the new security baseline for character length and preventing password reuse.
 
-### 2. Lockout Enforcement (The Negative Test)
-Validating that the system blocks access after the 3rd failed attempt.
-![Account Locked Message](./account_locked.png)
+| Password Length (8) | Password History (5) |
+| :--- | :--- |
+| ![Length](./password_length.png) | ![History](./password_history.png) |
 
-### 3. Administrative Unlock
-Showing the manual intervention required by an IAM Admin to restore the identity.
-![ADUC Unlock View](./admin_unlock.png)
+### 2. Brute Force Protection (Lockout Policy)
+Configuring the threshold for failed attempts and the mandatory cooling-off duration.
+
+| Lockout Threshold | Lockout Duration |
+| :--- | :--- |
+| ![Threshold](./lockout_threshold.png) | ![Duration](./lockout_duration.png) |
+
+### 3. Enforcement & Validation
+Updating the client-side policy and performing a negative test to trigger the account lockout.
+
+| GPUpdate Force | Lockout Error Message |
+| :--- | :--- |
+| ![GPUpdate](./gpupdate.png) | ![Locked Out](./lockout_message.png) |
+
+### 4. Administrative Recovery
+Showing the "Unlock Account" procedure in ADUC to restore access.
+![Admin Unlock](./admin_unlock.png)
