@@ -46,5 +46,6 @@ To demonstrate advanced technical execution and compliance governance through th
 * **CompTIA:** Security+, Network+, A+, PenTest+, Project+, Data+
 
 ## 📫 Contact & Links
-* **LinkedIn:** [Insert your LinkedIn URL]
-* **Email:** [Insert your email address]
+* **LinkedIn:** www.linkedin.com/in/nshury-cyber
+
+* **Email:** nshury22@gmail.com
