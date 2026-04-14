@@ -4,9 +4,10 @@ from dotenv import load_dotenv
 
 # 1. Load your secure keys from the .env file
 load_dotenv()
-TENANT_ID = os.getenv('TENANT_ID')
-CLIENT_ID = os.getenv('CLIENT_ID')
-CLIENT_SECRET = os.getenv('CLIENT_SECRET')
+TENANT_ID = os.getenv('aed8380a-e825-48d9-82e9-4022fc9a78c4')
+CLIENT_ID = os.getenv('c281cf22-6568-4a24-92d4-d9328ab6a195
+')
+CLIENT_SECRET = os.getenv('YcW8Q~~dkSYeNw8AzfjPUKHVXpJtCgRrGAvVidlg')
 
 def get_token():
     # Authenticates the script with Microsoft Entra ID
