@@ -8,8 +8,7 @@ TENANT_ID = os.getenv('TENANT_ID')
 CLIENT_ID = os.getenv('CLIENT_ID')
 CLIENT_SECRET = os.getenv('CLIENT_SECRET')
 
-def get_token():
-    # Authenticates the script with Microsoft Entra ID
+   def get_token():
     url = f"https://login.microsoftonline.com/{TENANT_ID}/oauth2/v2.0/token"
     data = {
         'client_id': CLIENT_ID,
@@ -18,6 +17,9 @@ def get_token():
         'grant_type': 'client_credentials'
     }
     response = requests.post(url, data=data)
+    # ADD THIS LINE: It will print the exact error message from Microsoft
+    if response.status_code != 200:
+        print(f"DEBUG ERROR: {response.json()}") 
     return response.json().get('access_token')
 
 def audit_identity_risks(token):
