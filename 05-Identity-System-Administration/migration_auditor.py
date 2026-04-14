@@ -17,6 +17,19 @@ CLIENT_SECRET = os.getenv('CLIENT_SECRET')
         'grant_type': 'client_credentials'
     }
     response = requests.post(url, data=data)
+    
+    # NEW DEBUGGING LOGIC
+    if response.status_code != 200:
+        error_info = response.json()
+        print(f"--- 🛠️ MICROSOFT DEBUG INFO ---")
+        print(f"Status Code: {response.status_code}")
+        print(f"Error: {error_info.get('error')}")
+        print(f"Description: {error_info.get('error_description')}")
+        print(f"-------------------------------")
+        return None
+        
+    return response.json().get('access_token')
+    response = requests.post(url, data=data)
     # ADD THIS LINE: It will print the exact error message from Microsoft
     if response.status_code != 200:
         print(f"DEBUG ERROR: {response.json()}") 
