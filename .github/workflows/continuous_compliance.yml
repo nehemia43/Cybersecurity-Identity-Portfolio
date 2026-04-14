@@ -1,0 +1,12 @@
+name: Continuous Compliance Scan
+on:
+  schedule:
+    - cron: '0 0 * * *' # Runs every night at midnight
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run Audit Bot
+        run: python 01-IGA-Identity-Governance/Project-43/compliance_collector.py
