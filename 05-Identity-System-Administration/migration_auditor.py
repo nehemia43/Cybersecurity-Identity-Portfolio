@@ -8,7 +8,7 @@ TENANT_ID = os.getenv('TENANT_ID')
 CLIENT_ID = os.getenv('CLIENT_ID')
 CLIENT_SECRET = os.getenv('CLIENT_SECRET')
 
-   def get_token():
+def get_token():
     url = f"https://login.microsoftonline.com/{TENANT_ID}/oauth2/v2.0/token"
     data = {
         'client_id': CLIENT_ID,
@@ -18,7 +18,7 @@ CLIENT_SECRET = os.getenv('CLIENT_SECRET')
     }
     response = requests.post(url, data=data)
     
-    # NEW DEBUGGING LOGIC
+    # Debugging logic to catch the exact Microsoft error
     if response.status_code != 200:
         error_info = response.json()
         print(f"--- 🛠️ MICROSOFT DEBUG INFO ---")
@@ -29,18 +29,12 @@ CLIENT_SECRET = os.getenv('CLIENT_SECRET')
         return None
         
     return response.json().get('access_token')
-    response = requests.post(url, data=data)
-    # ADD THIS LINE: It will print the exact error message from Microsoft
-    if response.status_code != 200:
-        print(f"DEBUG ERROR: {response.json()}") 
-    return response.json().get('access_token')
 
 def audit_identity_risks(token):
     print("--- 🔍 Starting Domain Migration Impact Analysis ---")
     headers = {'Authorization': f'Bearer {token}'}
     
-    # FETCH USERS: Simulating "SuccessFactors" data validation
-    # This proves you can track UPN and Object ID as requested
+    # FETCH USERS: Pulling UPN and ID attributes
     user_url = "https://graph.microsoft.com/v1.0/users?$select=displayName,userPrincipalName,id"
     users = requests.get(user_url, headers=headers).json().get('value', [])
     
@@ -48,14 +42,13 @@ def audit_identity_risks(token):
     for user in users:
         print(f"Checking: {user['userPrincipalName']} | ID: {user['id']}")
 
-    # FETCH APPS: Reviewing Group 1, 2, and 3 apps
+    # FETCH APPS: Scanning for SAML/SSO dependencies
     app_url = "https://graph.microsoft.com/v1.0/servicePrincipals?$select=displayName,preferredSingleSignOnMode"
     apps = requests.get(app_url, headers=headers).json().get('value', [])
     
     print(f"\nScanning {len(apps)} Applications for SSO Dependencies...")
     for app in apps:
         sso_mode = app.get('preferredSingleSignOnMode', 'None/Other')
-        # If an app uses SAML, it likely relies on UPN
         risk = "⚠️ HIGH RISK" if sso_mode == "saml" else "✅ LOW RISK"
         print(f"App: {app['displayName']} | SSO: {sso_mode} | STATUS: {risk}")
 
