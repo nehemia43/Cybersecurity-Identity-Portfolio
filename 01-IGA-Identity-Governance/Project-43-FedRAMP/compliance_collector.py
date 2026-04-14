@@ -4,7 +4,7 @@ from datetime import datetime, timedelta
 
 # --- 1. CONFIGURATION ---
 # IMPORTANT: Make sure these are correct!
-OKTA_URL = "https://dev-XXXXXX.okta.com" 
+OKTA_URL = "https://org1-pro-f3f8e-admin.oktapreview.com/admin/access/api/tokens" 
 API_TOKEN = "008wQfimNcQxufl_L9S2r5pk_Ko4KIQqzzeAlOn-LE" 
 
 def generate_evidence():
