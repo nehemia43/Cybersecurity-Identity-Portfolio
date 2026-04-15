@@ -1,0 +1,5 @@
+.env
+05-Identity-System-Administration/.env
+.github/workflows/.env
+__pycache__/
+*.pyc

@@ -1,0 +1,3 @@
+employee_id,name,upn,status,last_working_day
+EMP404,John Ghost,jghost@yourlab.onmicrosoft.com,terminated,2026-04-14
+EMP505,Jane Active,jactive@yourlab.onmicrosoft.com,active,N/A

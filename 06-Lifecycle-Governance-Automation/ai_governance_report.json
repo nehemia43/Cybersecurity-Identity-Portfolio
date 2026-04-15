@@ -1,0 +1,10 @@
+{
+  "subject": "John Ghost (EMP404)",
+  "ai_risk_assessment": "CRITICAL",
+  "findings": [
+    "AI detected toxic permission combination: User holds both 'Billing Admin' and 'Vendor Creator' roles.",
+    "Pattern analysis suggests unusual bulk data export attempted 2 hours prior to termination.",
+    "AI Recommendation: Full forensic log review of Microsoft 365 environment required."
+  ],
+  "hipaa_compliance_check": "FAIL - Separation of Duties violation"
+}
