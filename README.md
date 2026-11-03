@@ -45,3 +45,11 @@ To architect scalable, automated, and AI-enhanced identity solutions that enforc
 ## 📫 Contact & Links
 * **LinkedIn:** [www.linkedin.com/in/nshury-cyber](https://www.linkedin.com/in/nshury-cyber)
 * **Email:** nshury22@gmail.com
+
+## Secure Multi-Cloud Business Platform (in progress)
+
+A new enterprise-style Azure/GCP lab program connects five architecture case studies. Existing Azure component tests support the design; the integrated application, GCP implementation, detection, and Terraform are not yet complete.
+
+- [Architecture overview and five chapters](secure-multicloud-platform/README.md)
+- [Validation register and limitations](secure-multicloud-platform/validation-register.md)
+- [Live portfolio architecture](https://aesthetic-pudding-79f963.netlify.app/architecture.html)
